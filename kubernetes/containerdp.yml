@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: container-deploy
+  # labels:
+  #   app: micro-frontends
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      # name: container-deploy
+      app: micro-frontends
+  template:
+    metadata:
+      # name: container-deploy
+      labels:
+        # name: container-deploy
+        app: micro-frontends
+    spec:
+      containers:
+        - name: container
+          # image: ejemplo__spa_container
+          image: hadiazb/container:1.0.1
+          ports:
+            - containerPort: 9000

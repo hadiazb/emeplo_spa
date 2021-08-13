@@ -1,0 +1,27 @@
+version: '3.4'
+services:
+  container:
+    build: ./container
+    ports:
+      - '9000:9000'
+    depends_on:
+      - header
+      - footer
+      - shared
+      - banner
+  shared:
+    build: ./shared
+    ports:
+      - '9001:9001'
+  footer:
+    build: ./footer
+    ports:
+      - '9002:9002'
+  header:
+    build: ./header
+    ports:
+      - '9003:9003'
+  banner:
+    build: ./banner
+    ports:
+      - '9004:9004'

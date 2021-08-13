@@ -1,0 +1,15 @@
+.banner {
+  margin: 0;
+  padding: 0;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 75rem;
+    padding: 5px 2rem;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(139, 139, 201);
+  }
+}
